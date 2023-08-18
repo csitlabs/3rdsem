@@ -1,4 +1,4 @@
-// lab 6 - WAP to implement Cohen Sutherlsnd Line Clipping Algorithm
+// lab 6 - WAP to implement Cohen Sutherland Line Clipping Algorithm
 
 #include <graphics.h>
 #include <conio.h>
