@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity full_adder is 
+  port (
+    input1 : in std_logic;
+    input2 : in std_logic;
+    input3 : in std_logic;
+    sum : out std_logic;
+    carry : out std_logic
+  );
+end full_adder;
+
+architecture rtl of full_adder is
+begin
+  carry <= (input1 and input2) or (input2 and input3) or (input3 and input1);
+  sum <= ((input1 xor input2) xor input3);
+end rtl;

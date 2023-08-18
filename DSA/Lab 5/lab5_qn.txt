@@ -1,0 +1,7 @@
+LAB - 5 
+14 July 2023 
+29 Asar 2080
+
+1. WAP to demonstrate linked list as ADT.
+2. WAP to implement stack using linked list.
+3. WAP to implement queue using linked list.

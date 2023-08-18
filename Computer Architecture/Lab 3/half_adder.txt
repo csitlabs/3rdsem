@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity half_adder is 
+  port (
+    input1 : in std_logic;
+    input2 : in std_logic;
+    sum : out std_logic;
+    carry : out std_logic
+  );
+end half_adder;
+
+architecture rtl of half_adder is
+begin
+  carry <= input1 and input2;
+  sum <= input1 xor input2;
+end rtl;

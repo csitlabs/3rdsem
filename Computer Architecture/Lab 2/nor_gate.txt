@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity nor_gate is
+  port (
+    input1 : in std_logic;
+    input2 : in std_logic;
+    output1 : out std_logic
+  );
+end nor_gate;
+
+architecture rtl of nor_gate is 
+begin
+  output1 <= input1 nor input2;
+end rtl;
+
+

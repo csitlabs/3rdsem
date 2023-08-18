@@ -1,0 +1,10 @@
+Lab 6
+19 July 2023, 3 Shrawan 2080
+
+1. WAP to sort data using bubble sort.
+2. WAP to sort data using selection sort.
+3. WAP to sort data using insertion sort.
+4. WAP to sort data using shell sort.
+5. WAP to sort data using merge sort.
+6. WAP to sort data using quick sort.
+7. WAP to sort data using heap sort.

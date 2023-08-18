@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity addsub is
+    port (
+        M   : in  std_logic;
+        a   : in  std_logic_vector(3 downto 0);
+        b   : in  std_logic_vector(3 downto 0);
+        s   : out std_logic_vector(3 downto 0);
+        cf  : out std_logic;
+        ovf : out std_logic
+    );
+end addsub;
+
+architecture struct of addsub is
+    signal c : std_logic_vector(4 downto 0);
+    signal bx : std_logic_vector(3 downto 0);
+begin
+    bx <= b xor M & M & M & M;
+    c(0) <= M;
+    s <= a xor bx xor c(3 downto 0);
+    c(4 downto 1) <= (a and bx) or (c(3 downto 0) and (a xor bx));
+    cf <= c(4);
+    ovf <= c(3) xor c(4);
+end struct;

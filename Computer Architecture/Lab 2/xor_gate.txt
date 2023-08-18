@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity xor_gate is
+  port (
+    input1 : in std_logic;
+    input2 : in std_logic;
+    output1 : out std_logic
+  );
+end xor_gate;
+
+architecture rtl of xor_gate is 
+begin
+  output1 <= input1 xor input2;
+end rtl;

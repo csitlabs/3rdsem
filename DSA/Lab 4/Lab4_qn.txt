@@ -1,0 +1,4 @@
+Lab 4
+1. Write a menu driven program to demonstrate queue as ADT.
+2. Write a menu driven program to circular queue as ADT.
+3. Write a menu driven program to demonstrate priority queue as ADT.

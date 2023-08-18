@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+
+entity ALU is
+  port(
+    selection_line : in std_logic_vector(2 downto 0);
+    a : in std_logic_vector(3 downto 0);
+    b : in std_logic_vector(3 downto 0);
+    ans : out std_logic_vector(3 downto 0)
+);
+end ALU;
+
+architecture ALU_arc of ALU is
+begin
+  process (selection_line, a, b) is
+  begin
+      if(selection_line = "000") then
+        ans <= a+b;
+    elsif(selection_line = "001") then
+        ans <= a-b; 
+    elsif(selection_line = "010") then
+        ans <= a-1;
+    elsif(selection_line = "011") then
+        ans <= a+1;  
+    elsif(selection_line = "100") then
+        ans <= a and b;
+    elsif(selection_line = "101") then
+        ans <= a or b;
+    elsif(selection_line = "110") then
+        ans <= not(a);  
+    else
+        ans <= a xor b;
+    end if;
+end process;
+end ALU_arc;
+
+

@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity nand_gate is
+  port (
+    input1 : in std_logic;
+    input2 : in std_logic;
+    output1 : out std_logic
+  );
+end nand_gate;
+
+architecture rtl of nand_gate is 
+begin
+  output1 <= input1 nand input2;
+end rtl;

@@ -1,0 +1,18 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity paritycheck is
+    port (
+        a    : in  STD_LOGIC_VECTOR (3 downto 0);
+        even : out STD_LOGIC;
+        odd  : out STD_LOGIC
+    );
+end paritycheck;
+
+architecture paritycheck_arch of paritycheck is
+    signal i: std_logic;
+begin
+    i <= a(0) xor a(1) xor a(2) xor a(3);
+    even <= i;
+    odd <= not i;
+end paritycheck_arch;

@@ -1,0 +1,6 @@
+Lab 8 (12 Shrawan 2078 | 28 July 2023)
+1. WAP to demonstrate Kruskals Algorithm to find MST.
+2. WAP to demonstrate Prims Algorithm to find MST.
+3. WAP to demonstrate Dijkastra Algorithm to find shortest path.
+4. WAP to traverse graph using BFS.
+5. WAP to traverse graph using DFS.
