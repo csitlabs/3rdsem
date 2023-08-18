@@ -5,7 +5,8 @@ Operation of list are given below:
 3. Deletion of data from specific position
 4. Traverse the element in the list
 5. Merge two list
-6. Exit */
+6. Exit 
+*/
 
 
 #include<iostream>
