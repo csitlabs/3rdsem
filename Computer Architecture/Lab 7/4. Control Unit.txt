@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ControlUnit is
+    port (
+        opcode : in std_logic_vector(3 downto 0);
+        controlSignals : out std_logic_vector(7 downto 0)
+    );
+end entity ControlUnit;
+
+architecture Behavioral of ControlUnit is
+begin
+    process (opcode)
+    begin
+        case opcode is
+            -- Instruction 1: Load
+            when "0001" =>
+                controlSignals <= "00000001"; -- Set specific control signals for load instruction
+            
+            -- Instruction 2: Add
+            when "0010" =>
+                controlSignals <= "00000110"; -- Set specific control signals for add instruction
+            
+            -- Instruction 3: Subtract
+            when "0011" =>
+                controlSignals <= "00001010"; -- Set specific control signals for subtract instruction
+            
+            -- Other instructions...
+            
+            -- Default case
+            when others =>
+                controlSignals <= "00000000"; -- Set default control signals
+        end case;
+    end process;
+end architecture Behavioral;
