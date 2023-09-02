@@ -1,7 +1,6 @@
 // 3. Restoring Method
 
 #include <stdio.h>
-#include <conio.h>
 #include <math.h>
 
 int a = 0, b = 0, c = 0, com[5] = {1, 0, 0, 0, 0}, s = 0;
@@ -156,7 +155,6 @@ int main() {
         printf("%d", anumcp[i]);
     }
     
-    getch();
     return 0;
 }
 
